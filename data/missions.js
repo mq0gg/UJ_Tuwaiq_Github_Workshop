@@ -32,7 +32,7 @@ const MISSIONS = [
   {
     id: 'break1', type: 'break', tag: 'BREAK', name: 'SAVING PROGRESS',
     ar: 'استراحة 10 دقائق',
-    start: 75, end: 85, lvl: 'LVL 03', pct: 40,
+    start: 75, end: 90, lvl: 'LVL 03', pct: 40,
   },
   {
     id: 'm4', type: 'mission', tag: 'MISSION 04 / 08', name: 'COLLABORATE',
