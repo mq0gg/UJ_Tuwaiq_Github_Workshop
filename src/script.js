@@ -220,8 +220,29 @@ function setupTimers() {
   });
 }
 
+/* ---------- Leaderboard: filled from data/leaderboard.js ---------- */
+function renderLeaderboard() {
+  if (typeof LEADERBOARD === 'undefined') return;
+  [['individuals', '#lb-individuals'], ['teams', '#lb-teams']].forEach(([key, sel]) => {
+    const rows = $$('li', $(sel));
+    const data = LEADERBOARD[key] || [];
+    let filled = 0;
+    rows.forEach((row, i) => {
+      const d = data[i];
+      if (!d || !d.name) return;
+      filled++;
+      $('.podium__name', row).textContent = d.name;
+      $('.podium__xp', row).textContent = `${d.xp} XP`;
+      row.classList.add('is-filled');
+    });
+    const state = $(`[data-board-state="${key}"]`);
+    if (state && filled) { state.textContent = 'RESULTS IN'; state.classList.add('is-in'); }
+  });
+}
+
 /* ---------- Start ---------- */
 bootTerminal();
 renderMissions();
 setupTimers();
+renderLeaderboard();
 $$('[data-hud]').forEach((el) => { if (!el.classList.contains('q')) watchHud(el); });

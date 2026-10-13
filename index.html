@@ -308,6 +308,46 @@
       </div>
     </section>
 
+    <section class="section" id="leaderboard" data-hud="sec-results" aria-labelledby="lb-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// FINAL LEADERBOARD</p>
+          <h2 id="lb-h">الترتيب النهائي</h2>
+          <p class="sec-sub">النتائج تنعلن بعد الاستراحة الأخيرة. نجمع النقاط… وبعدها نعلن الفائزين.</p>
+        </header>
+
+        <div class="boards">
+          <article class="board" style="--acc: var(--lav)">
+            <header class="board__head">
+              <svg class="ic" aria-hidden="true"><use href="#i-person"/></svg>
+              <h3 dir="ltr">TOP 3 INDIVIDUALS</h3>
+              <span class="board__state" dir="ltr" data-board-state="individuals">LOADING RESULTS</span>
+            </header>
+            <ol class="podium" id="lb-individuals">
+              <li class="p1"><span class="podium__rank" dir="ltr">1ST</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p2"><span class="podium__rank" dir="ltr">2ND</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p3"><span class="podium__rank" dir="ltr">3RD</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+            </ol>
+            <p class="board__note">نقاط فردية: الأسئلة السريعة، الـLABs، و<span dir="ltr">Speed Challenge</span></p>
+          </article>
+
+          <article class="board" style="--acc: var(--teal)">
+            <header class="board__head">
+              <svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>
+              <h3 dir="ltr">TOP 3 TEAMS</h3>
+              <span class="board__state" dir="ltr" data-board-state="teams">LOADING RESULTS</span>
+            </header>
+            <ol class="podium" id="lb-teams">
+              <li class="p1"><span class="podium__rank" dir="ltr">1ST</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p2"><span class="podium__rank" dir="ltr">2ND</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p3"><span class="podium__rank" dir="ltr">3RD</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+            </ol>
+            <p class="board__note">نقاط الفرق: <span dir="ltr">Spot the Mistake</span>، <span dir="ltr">Conflict Resolver</span>، و<span dir="ltr">Final Boss</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="closing" id="end" data-hud="complete">
@@ -325,6 +365,7 @@
   </footer>
 
   <script src="data/missions.js"></script>
+  <script src="data/leaderboard.js"></script>
   <script src="src/script.js"></script>
 </body>
 </html>
