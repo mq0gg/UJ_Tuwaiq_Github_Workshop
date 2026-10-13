@@ -80,6 +80,20 @@ UJ_Tuwaiq_Github_Workshop/
 | Mission 08 | Automate It | 10 min |
 | Bonus Level | Go Live | 10 min |
 
+## Contributing
+
+Never push straight to `main`. Use the workflow from Mission 04:
+
+```bash
+git switch -c <branch-name>
+# make your changes
+git add .
+git commit -m "Clear message about what changed"
+git push -u origin <branch-name>
+```
+
+Then open a Pull Request, ask a teammate for a review, and merge after the CI check passes.
+
 ## License
 
 MIT
