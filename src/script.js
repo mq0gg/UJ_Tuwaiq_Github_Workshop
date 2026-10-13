@@ -171,7 +171,57 @@ function renderMissions() {
   if (typeof hudListeners !== 'undefined') hudListeners.push(mark);
 }
 
+/* ---------- Boss timers ---------- */
+function setupTimers() {
+  $$('.timer').forEach((t) => {
+    const total = Number(t.dataset.seconds);
+    const digits = $('.timer__digits', t);
+    const fill = $('.timer__bar span', t);
+    const toggle = $('[data-act="toggle"]', t);
+    const label = $('span', toggle);
+    const use = $('use', toggle);
+    let left = total;
+    let tick = null;
+
+    const fmt = (s) => String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+    const draw = () => {
+      digits.textContent = fmt(left);
+      fill.style.width = (left / total) * 100 + '%';
+      t.classList.toggle('is-low', left > 0 && left <= 30);
+      t.classList.toggle('is-done', left === 0);
+    };
+    const stop = (text) => {
+      clearInterval(tick); tick = null;
+      t.classList.remove('is-running');
+      label.textContent = text;
+      use.setAttribute('href', '#i-play');
+    };
+
+    toggle.addEventListener('click', () => {
+      if (tick) { stop('كمّل'); return; }
+      if (left === 0) left = total;
+      t.classList.add('is-running');
+      label.textContent = 'إيقاف';
+      use.setAttribute('href', '#i-pause');
+      tick = setInterval(() => {
+        left = Math.max(0, left - 1);
+        draw();
+        if (left === 0) { stop('من جديد'); digits.textContent = "TIME'S UP"; }
+      }, 1000);
+    });
+
+    $('[data-act="reset"]', t).addEventListener('click', () => {
+      left = total;
+      stop('ابدأ');
+      draw();
+    });
+
+    draw();
+  });
+}
+
 /* ---------- Start ---------- */
 bootTerminal();
 renderMissions();
+setupTimers();
 $$('[data-hud]').forEach((el) => { if (!el.classList.contains('q')) watchHud(el); });

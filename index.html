@@ -113,6 +113,132 @@
       </div>
     </section>
 
+    <section class="section" id="bosses" data-hud="sec-bosses" aria-labelledby="bosses-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// BOSS BATTLES</p>
+          <h2 id="bosses-h">التحديات</h2>
+          <p class="sec-sub">ثلاث تحديات، كل واحد له وقت ونقاط XP. المؤقت جاهز… اضغط ابدأ وخلّ الوقت يمشي.</p>
+        </header>
+
+        <div class="bosses">
+          <article class="boss" id="boss-b1" style="--acc: var(--orange); --tint: var(--o-tint)">
+            <header class="boss__head">
+              <span class="boss__icon"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg></span>
+              <span class="boss__tag" dir="ltr">BOSS BATTLE 01</span>
+              <span class="boss__mode" dir="ltr"><svg class="ic" aria-hidden="true"><use href="#i-person"/></svg>INDIVIDUAL</span>
+            </header>
+            <h3 class="boss__name"><span dir="ltr">GITHUB SPEED CHALLENGE</span></h3>
+            <p class="boss__hook"><span dir="ltr">WHO IS THE FASTEST?</span></p>
+            <p class="boss__obj">أنشئ أول Repository لك… في خمس دقائق بس.</p>
+
+            <div class="timer" data-seconds="300">
+              <span class="timer__digits" dir="ltr">05:00</span>
+              <div class="timer__ctrl">
+                <button type="button" class="tbtn" data-act="toggle"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><span>ابدأ</span></button>
+                <button type="button" class="tbtn tbtn--icon" data-act="reset" aria-label="أعد المؤقت"><svg class="ic" aria-hidden="true"><use href="#i-sync"/></svg></button>
+              </div>
+              <span class="timer__bar" aria-hidden="true"><span></span></span>
+            </div>
+
+            <ol class="steps">
+              <li>أنشئ Repository جديد</li>
+              <li>سمّه: <code>portfolio</code></li>
+              <li>خلّه <code>Public</code></li>
+              <li>أضف Description للـRepository</li>
+              <li>الـDescription فيه: <code>Name + Major + Level + Track</code></li>
+              <li>ارفع يدك وورّنا الـRepository على شاشتك</li>
+            </ol>
+
+            <ul class="rewards">
+              <li class="r1"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">1ST</span><b dir="ltr">+200 XP</b></li>
+              <li class="r2"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">2ND</span><b dir="ltr">+150 XP</b></li>
+              <li class="r3"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">3RD</span><b dir="ltr">+100 XP</b></li>
+            </ul>
+            <p class="boss__extra"><b dir="ltr">+50 XP</b> لكل اللي شاركوا في التحدي</p>
+          </article>
+
+          <article class="boss" id="boss-b2" style="--acc: var(--teal); --tint: var(--t-tint)">
+            <header class="boss__head">
+              <span class="boss__icon"><svg class="ic" aria-hidden="true"><use href="#i-git-merge"/></svg></span>
+              <span class="boss__tag" dir="ltr">BOSS BATTLE 02</span>
+              <span class="boss__mode" dir="ltr"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>TEAMS</span>
+            </header>
+            <h3 class="boss__name"><span dir="ltr">CONFLICT RESOLVER</span></h3>
+            <p class="boss__hook"><span dir="ltr">WHO WILL VOLUNTEER?</span></p>
+            <p class="boss__obj">أول فريقين يرفعون البنر يتنافسون: مين يحل الـconflict أسرع؟</p>
+
+            <div class="timer" data-seconds="900">
+              <span class="timer__digits" dir="ltr">15:00</span>
+              <div class="timer__ctrl">
+                <button type="button" class="tbtn" data-act="toggle"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><span>ابدأ</span></button>
+                <button type="button" class="tbtn tbtn--icon" data-act="reset" aria-label="أعد المؤقت"><svg class="ic" aria-hidden="true"><use href="#i-sync"/></svg></button>
+              </div>
+              <span class="timer__bar" aria-hidden="true"><span></span></span>
+            </div>
+
+            <ol class="steps">
+              <li>ارفعوا البنر… أول فريقين بيتنافسون</li>
+              <li>اختاروا جهاز واحد لكل فريق</li>
+              <li>افتحوا هذا الـRepository</li>
+              <li>افتحوا الـPull Request حق فريقكم من <a href="#arena">ساحة الـConflicts</a></li>
+              <li>حلّوا الـconflict</li>
+              <li>ارفعوا بنر الفريق أول ما تخلصون</li>
+            </ol>
+
+            <ul class="rewards">
+              <li class="r1"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">1ST</span><b dir="ltr">+200 XP</b></li>
+              <li class="r2"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">2ND</span><b dir="ltr">+100 XP</b></li>
+            </ul>
+            <p class="boss__extra">لو حل الفريق الأسرع طلع غلط، يكمل الوقت لين يصلحونه… أو يحله الفريق الثاني.</p>
+          </article>
+
+          <article class="boss boss--final" id="boss-final" style="--acc: var(--red); --tint: var(--r-tint)">
+            <div class="boss__main">
+              <header class="boss__head">
+                <span class="boss__icon"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg></span>
+                <span class="boss__tag" dir="ltr">FINAL BOSS</span>
+                <span class="boss__mode" dir="ltr"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>TEAMS OF 3</span>
+              </header>
+              <h3 class="boss__name"><span dir="ltr">PROJECT MANAGEMENT CHALLENGE</span></h3>
+              <p class="boss__hook"><span dir="ltr">BUILD YOUR WORKSPACE</span></p>
+              <p class="boss__obj">حوّلوا Repository واحد لمساحة شغل جماعية بـGitHub Projects.</p>
+
+              <div class="timer" data-seconds="900">
+                <span class="timer__digits" dir="ltr">15:00</span>
+                <div class="timer__ctrl">
+                  <button type="button" class="tbtn" data-act="toggle"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><span>ابدأ</span></button>
+                  <button type="button" class="tbtn tbtn--icon" data-act="reset" aria-label="أعد المؤقت"><svg class="ic" aria-hidden="true"><use href="#i-sync"/></svg></button>
+                </div>
+                <span class="timer__bar" aria-hidden="true"><span></span></span>
+              </div>
+
+              <ul class="rewards">
+                <li class="r1"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">1ST</span><b dir="ltr">+300 XP</b></li>
+                <li class="r2"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">2ND</span><b dir="ltr">+250 XP</b></li>
+                <li class="r3"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg><span dir="ltr">3RD</span><b dir="ltr">+200 XP</b></li>
+              </ul>
+              <p class="boss__extra"><b dir="ltr">+100 XP</b> لكل فريق يشارك</p>
+            </div>
+
+            <div class="boss__side">
+              <p class="boss__judge"><span dir="ltr">FASTEST &amp; ORGANIZED TEAM</span>Tasks واضحة، كل عضو له Task، والـStatus صحيح.</p>
+              <ol class="steps steps--cols">
+                <li>اختاروا Repository واحد للفريق</li>
+                <li>ضيفوا زملاءكم Collaborators من Settings</li>
+                <li>افتحوا GitHub Projects وأنشئوا Project</li>
+                <li>أضيفوا Tasks</li>
+                <li>وزّعوها: كل عضو Assign على Task</li>
+                <li>حرّكوا الـTasks لـ In Progress</li>
+                <li>خلّوا الـBoard مفتوح على جهاز واحد</li>
+                <li>ارفعوا البنر لما يجهز الـBoard</li>
+              </ol>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="closing" id="end" data-hud="complete">
