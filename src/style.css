@@ -511,3 +511,27 @@ var { font-style: normal; color: var(--orange); }
 
 @media (max-width: 760px) { .boards { grid-template-columns: minmax(0, 1fr); } }
 
+/* ---------- cheat sheet ---------- */
+.sheet { padding: 4px 0 12px; }
+.sheet__group + .sheet__group { border-top: 1px solid var(--border); }
+.sheet__h { margin: 0; padding: 16px 20px 6px; font: 600 12px/1 var(--font-mono); letter-spacing: 0.14em; color: var(--dim); }
+.cmd { display: grid; grid-template-columns: 36px minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 14px; margin-inline: 6px; padding: 6px 14px 6px 8px; border-radius: 8px; }
+.cmd:hover { background: var(--panel); }
+.cmd code { font: 500 14px/1.5 var(--font-mono); color: var(--text); overflow-wrap: anywhere; }
+.cmd code .p { color: var(--green); font-weight: 700; }
+.cmd p { margin: 0; text-align: right; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+.copy { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; color: var(--muted); cursor: pointer; transition: color 0.15s, border-color 0.15s; }
+.copy:hover { color: var(--lav); border-color: var(--lav); }
+.copy .ic--done { display: none; }
+.copy.is-done { color: var(--green); border-color: var(--green); }
+.copy.is-done .ic--copy { display: none; }
+.copy.is-done .ic--done { display: block; }
+.copy--off, .copy--off:hover { cursor: default; color: var(--red); border-color: color-mix(in srgb, var(--red) 40%, transparent); background: var(--r-tint); }
+.cmd--danger code { color: var(--red); text-decoration: line-through; text-decoration-thickness: 1px; }
+.cmd--danger code .p { color: var(--red); }
+.cmd--danger p { color: var(--red); }
+
+@media (max-width: 680px) {
+  .cmd { grid-template-columns: 34px minmax(0, 1fr); row-gap: 2px; }
+  .cmd p { grid-column: 2; }
+}
