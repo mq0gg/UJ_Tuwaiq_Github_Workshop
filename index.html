@@ -85,6 +85,34 @@
       </div>
     </section>
 
+    <section class="section" id="missions" aria-labelledby="missions-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// MISSION MAP</p>
+          <h2 id="missions-h">خريطة المهمات</h2>
+          <p class="sec-sub">240 دقيقة فيها 8 مهمات و3 تحديات ومستوى Bonus. انزل مع الخريطة… والـHUD فوق يمشي معك.</p>
+        </header>
+
+        <figure class="runbar" dir="ltr">
+          <div class="runbar__track" id="runbar"></div>
+          <div class="runbar__axis" aria-hidden="true">
+            <span style="--at: 0">0:00</span><span style="--at: 60">1:00</span><span style="--at: 120">2:00</span><span style="--at: 180">3:00</span><span style="--at: 240">4:00</span>
+          </div>
+          <figcaption class="legend">
+            <span><i class="sw sw--mission"></i>MISSION</span>
+            <span><i class="sw sw--boss"></i>BOSS BATTLE</span>
+            <span><i class="sw sw--bonus"></i>BONUS</span>
+            <span><i class="sw sw--break"></i>BREAK</span>
+            <span><i class="sw sw--lobby"></i>LOBBY / RESULTS</span>
+          </figcaption>
+        </figure>
+
+        <ol class="quest" id="quest"></ol>
+
+        <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-dot-fill"/></svg>كل الـLive Demos اليوم تصير على هذا الـRepository نفسه.</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="closing" id="end" data-hud="complete">
@@ -101,6 +129,7 @@
     </div>
   </footer>
 
+  <script src="data/missions.js"></script>
   <script src="src/script.js"></script>
 </body>
 </html>
