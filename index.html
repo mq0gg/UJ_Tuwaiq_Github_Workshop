@@ -16,6 +16,25 @@
   <script src="src/icons.js"></script>
   <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
 
+  <!-- HUD: updates while you scroll through the mission map -->
+  <header class="hud" id="hud" data-sc="teal">
+    <div class="hud__inner" dir="ltr">
+      <div class="hud__cap">
+        <svg class="ic" aria-hidden="true"><use href="#i-mark-github"/></svg>
+        <span class="hud__lab">GITHUB LAB</span>
+        <span class="hud__sep" aria-hidden="true"></span>
+        <span class="hud__tag" id="hud-tag">LOBBY</span>
+        <span class="hud__name" id="hud-name">WELCOME TO GITHUB LAB</span>
+      </div>
+      <div class="hud__cap">
+        <span class="hud__status"><span class="hud__dot" aria-hidden="true"></span><span id="hud-status">READY</span></span>
+        <span class="hud__lvl" id="hud-lvl">LVL 00</span>
+        <span class="hud__bar" role="progressbar" aria-label="Quest progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hud-bar"><span class="hud__fill" id="hud-fill"></span></span>
+        <span class="hud__pct" id="hud-pct">0%</span>
+      </div>
+    </div>
+  </header>
+
   <main id="main">
     <section class="hero" id="top" data-hud="lobby">
       <div class="wrap hero__grid">

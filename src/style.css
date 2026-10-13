@@ -236,3 +236,47 @@ var { font-style: normal; color: var(--orange); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
+/* ---------- HUD ---------- */
+.hud {
+  --sc: var(--teal); --acc: var(--lav);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: var(--hud-bg); border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.hud[data-sc="green"] { --sc: var(--green); }
+.hud[data-sc="orange"] { --sc: var(--orange); }
+.hud[data-sc="red"] { --sc: var(--red); }
+.hud[data-sc="lav"] { --sc: var(--lav); }
+.hud[data-acc="orange"] { --acc: var(--orange); --fill: var(--orange); }
+.hud[data-acc="teal"] { --acc: var(--teal); --fill: var(--teal); }
+.hud[data-acc="red"] { --acc: var(--red); --fill: var(--red); }
+.hud__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  max-width: calc(var(--maxw) + 2 * var(--gutter)); margin-inline: auto;
+  padding: 10px var(--gutter); height: var(--hud-h);
+}
+.hud__cap {
+  display: flex; align-items: center; gap: 10px; min-width: 0; height: 36px; padding-inline: 14px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 999px;
+  font: 600 12px/1 var(--font-mono); letter-spacing: 0.08em; white-space: nowrap;
+}
+.hud__cap .ic { width: 16px; height: 16px; }
+.hud__sep { width: 1px; height: 16px; background: var(--border-2); }
+.hud__tag { color: var(--acc); }
+.hud__name { overflow: hidden; text-overflow: ellipsis; color: var(--muted); font-weight: 500; }
+.hud__status { display: inline-flex; align-items: center; gap: 7px; color: var(--sc); }
+.hud__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sc); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sc) 22%, transparent); }
+.hud__bar { width: 120px; height: 7px; overflow: hidden; background: var(--panel-2); border: 1px solid var(--border); border-radius: 99px; }
+.hud__fill { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--fill, linear-gradient(90deg, var(--purple), var(--lav))); transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.hud__pct { min-width: 4ch; text-align: right; font-variant-numeric: tabular-nums; }
+.hud span { transition: color 0.3s; }
+
+@media (max-width: 820px) {
+  .hud__lab, .hud__sep, .hud__name, #hud-status { display: none; }
+  .hud__bar { width: 70px; }
+}
+@media (max-width: 440px) {
+  .hud__lvl { display: none; }
+  .hud__cap { padding-inline: 11px; gap: 8px; font-size: 11px; }
+}
+
