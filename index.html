@@ -239,6 +239,75 @@
       </div>
     </section>
 
+    <section class="section" id="arena" data-hud="sec-arena" aria-labelledby="arena-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// TEAM ARENA</p>
+          <h2 id="arena-h">ساحة الـConflicts</h2>
+          <p class="sec-sub">كل فريق متنافس له ملف خاص وbranch خاص، وفيه conflict جاهز بنفس المستوى. كذا كل فريق يحل الـconflict حقه بدون ما يتصادم مع الثاني.</p>
+        </header>
+
+        <div class="arenas">
+          <article class="arena-card" style="--acc: var(--teal)">
+            <header class="arena-card__head">
+              <span class="arena-card__tag" dir="ltr">TEAM 01</span>
+              <span class="chip chip--sm" dir="ltr"><span class="chip__dot" aria-hidden="true"></span>CONFLICT READY</span>
+            </header>
+            <dl class="kv">
+              <div><dt dir="ltr">FILE</dt><dd dir="ltr">arena/team-1.html</dd></div>
+              <div><dt dir="ltr">BRANCH</dt><dd dir="ltr">conflict-team-1</dd></div>
+              <div><dt dir="ltr">PULL REQUEST</dt><dd dir="ltr">Team 1 · Update arena title</dd></div>
+            </dl>
+            <pre class="diff" dir="ltr"><span class="mk">&lt;&lt;&lt;&lt;&lt;&lt;&lt; conflict-team-1</span>
+<span class="ours">&lt;h1 class="arena-title"&gt;Hello Programmers&lt;/h1&gt;</span>
+<span class="ours">&lt;a class="btn" href="../index.html#arena"&gt;Join the Quest&lt;/a&gt;</span>
+<span class="mk">=======</span>
+<span class="theirs">&lt;h1 class="arena-title"&gt;Welcome to Tuwaiq Club&lt;/h1&gt;</span>
+<span class="theirs">&lt;a class="btn" href="../index.html#arena"&gt;Start Mission&lt;/a&gt;</span>
+<span class="mk">&gt;&gt;&gt;&gt;&gt;&gt;&gt; main</span></pre>
+            <div class="arena-card__actions">
+              <a class="btn btn--primary" href="https://github.com/mq0gg/UJ_Tuwaiq_Github_Workshop/pulls?q=is%3Apr+is%3Aopen+head%3Aconflict-team-1" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-git-pull-request"/></svg>افتح الـPull Request</a>
+              <a class="btn btn--ghost" href="arena/team-1.html"><svg class="ic" aria-hidden="true"><use href="#i-file-code"/></svg>شوف الساحة</a>
+            </div>
+          </article>
+
+          <article class="arena-card" style="--acc: var(--orange)">
+            <header class="arena-card__head">
+              <span class="arena-card__tag" dir="ltr">TEAM 02</span>
+              <span class="chip chip--sm" dir="ltr"><span class="chip__dot" aria-hidden="true"></span>CONFLICT READY</span>
+            </header>
+            <dl class="kv">
+              <div><dt dir="ltr">FILE</dt><dd dir="ltr">arena/team-2.html</dd></div>
+              <div><dt dir="ltr">BRANCH</dt><dd dir="ltr">conflict-team-2</dd></div>
+              <div><dt dir="ltr">PULL REQUEST</dt><dd dir="ltr">Team 2 · Update arena title</dd></div>
+            </dl>
+            <pre class="diff" dir="ltr"><span class="mk">&lt;&lt;&lt;&lt;&lt;&lt;&lt; conflict-team-2</span>
+<span class="ours">&lt;h1 class="arena-title"&gt;Push Your Limits&lt;/h1&gt;</span>
+<span class="ours">&lt;a class="btn" href="../index.html#arena"&gt;Accept the Challenge&lt;/a&gt;</span>
+<span class="mk">=======</span>
+<span class="theirs">&lt;h1 class="arena-title"&gt;Programming Track Arena&lt;/h1&gt;</span>
+<span class="theirs">&lt;a class="btn" href="../index.html#arena"&gt;Enter the Arena&lt;/a&gt;</span>
+<span class="mk">&gt;&gt;&gt;&gt;&gt;&gt;&gt; main</span></pre>
+            <div class="arena-card__actions">
+              <a class="btn btn--primary" href="https://github.com/mq0gg/UJ_Tuwaiq_Github_Workshop/pulls?q=is%3Apr+is%3Aopen+head%3Aconflict-team-2" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-git-pull-request"/></svg>افتح الـPull Request</a>
+              <a class="btn btn--ghost" href="arena/team-2.html"><svg class="ic" aria-hidden="true"><use href="#i-file-code"/></svg>شوف الساحة</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="resolve">
+          <h3 class="resolve__h">كيف تحلّونه على GitHub؟</h3>
+          <ol class="resolve__steps">
+            <li><b>افتحوا الـPull Request</b><span>حق فريقكم بس</span></li>
+            <li><b dir="ltr">Resolve conflicts</b><span>الزر اللي تحت رسالة الـconflict</span></li>
+            <li><b>قرّروا</b><span>نسختكم؟ نسخة main؟ ولا الاثنين؟</span></li>
+            <li><b>امسحوا العلامات</b><span dir="ltr">&lt;&lt;&lt;&lt;&lt;&lt;&lt;  =======  &gt;&gt;&gt;&gt;&gt;&gt;&gt;</span></li>
+            <li><b dir="ltr">Mark as resolved</b><span>وبعدها <span dir="ltr">Commit merge</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="closing" id="end" data-hud="complete">
