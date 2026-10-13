@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# secrets
+.env
+
+# build output
+dist/
+
+# system files
+.DS_Store
