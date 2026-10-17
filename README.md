@@ -78,7 +78,6 @@ UJ_Tuwaiq_Github_Workshop/
 | Mission 07 | Manage the Project | 15 min |
 | Final Boss | Project Management Challenge | 15 min |
 | Mission 08 | Automate It | 10 min |
-| Bonus Level | Go Live | 10 min |
 
 ## Contributing
 
