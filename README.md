@@ -77,7 +77,6 @@ UJ_Tuwaiq_Github_Workshop/
 | Mission 06 | Don't Break the Repo | 15 min |
 | Mission 07 | Manage the Project | 15 min |
 | Final Boss | Project Management Challenge | 15 min |
-| Mission 08 | Automate It | 10 min |
 
 ## Contributing
 
