@@ -220,8 +220,60 @@ function setupTimers() {
   });
 }
 
+/* ---------- Leaderboard: filled from data/leaderboard.js ---------- */
+function renderLeaderboard() {
+  if (typeof LEADERBOARD === 'undefined') return;
+  [['individuals', '#lb-individuals'], ['teams', '#lb-teams']].forEach(([key, sel]) => {
+    const rows = $$('li', $(sel));
+    const data = LEADERBOARD[key] || [];
+    let filled = 0;
+    rows.forEach((row, i) => {
+      const d = data[i];
+      if (!d || !d.name) return;
+      filled++;
+      $('.podium__name', row).textContent = d.name;
+      $('.podium__xp', row).textContent = `${d.xp} XP`;
+      row.classList.add('is-filled');
+    });
+    const state = $(`[data-board-state="${key}"]`);
+    if (state && filled) { state.textContent = 'RESULTS IN'; state.classList.add('is-in'); }
+  });
+}
+
+/* ---------- Copy buttons in the cheat sheet ---------- */
+function setupCopy() {
+  $$('.cmd[data-copy]').forEach((row) => {
+    const text = row.dataset.copy;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy';
+    btn.setAttribute('aria-label', 'Copy: ' + text);
+    btn.innerHTML = '<svg class="ic ic--copy" aria-hidden="true"><use href="#i-copy"/></svg>'
+      + '<svg class="ic ic--done" aria-hidden="true"><use href="#i-check"/></svg>';
+    row.prepend(btn);
+
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (err) {
+        // Fallback: select the command so it can be copied by hand.
+        const range = document.createRange();
+        range.selectNodeContents($('code', row));
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+      btn.classList.add('is-done');
+      btn.setAttribute('aria-label', 'Copied');
+      setTimeout(() => { btn.classList.remove('is-done'); btn.setAttribute('aria-label', 'Copy: ' + text); }, 1600);
+    });
+  });
+}
+
 /* ---------- Start ---------- */
 bootTerminal();
 renderMissions();
 setupTimers();
+renderLeaderboard();
+setupCopy();
 $$('[data-hud]').forEach((el) => { if (!el.classList.contains('q')) watchHud(el); });

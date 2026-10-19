@@ -308,6 +308,87 @@
       </div>
     </section>
 
+    <section class="section" id="leaderboard" data-hud="sec-results" aria-labelledby="lb-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// FINAL LEADERBOARD</p>
+          <h2 id="lb-h">الترتيب النهائي</h2>
+          <p class="sec-sub">النتائج تنعلن بعد الاستراحة الأخيرة. نجمع النقاط… وبعدها نعلن الفائزين.</p>
+        </header>
+
+        <div class="boards">
+          <article class="board" style="--acc: var(--lav)">
+            <header class="board__head">
+              <svg class="ic" aria-hidden="true"><use href="#i-person"/></svg>
+              <h3 dir="ltr">TOP 3 INDIVIDUALS</h3>
+              <span class="board__state" dir="ltr" data-board-state="individuals">LOADING RESULTS</span>
+            </header>
+            <ol class="podium" id="lb-individuals">
+              <li class="p1"><span class="podium__rank" dir="ltr">1ST</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p2"><span class="podium__rank" dir="ltr">2ND</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p3"><span class="podium__rank" dir="ltr">3RD</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+            </ol>
+            <p class="board__note">نقاط فردية: الأسئلة السريعة، الـLABs، و<span dir="ltr">Speed Challenge</span></p>
+          </article>
+
+          <article class="board" style="--acc: var(--teal)">
+            <header class="board__head">
+              <svg class="ic" aria-hidden="true"><use href="#i-people"/></svg>
+              <h3 dir="ltr">TOP 3 TEAMS</h3>
+              <span class="board__state" dir="ltr" data-board-state="teams">LOADING RESULTS</span>
+            </header>
+            <ol class="podium" id="lb-teams">
+              <li class="p1"><span class="podium__rank" dir="ltr">1ST</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p2"><span class="podium__rank" dir="ltr">2ND</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+              <li class="p3"><span class="podium__rank" dir="ltr">3RD</span><span class="podium__name">__________</span><span class="podium__xp" dir="ltr">_____ XP</span></li>
+            </ol>
+            <p class="board__note">نقاط الفرق: <span dir="ltr">Spot the Mistake</span>، <span dir="ltr">Conflict Resolver</span>، و<span dir="ltr">Final Boss</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="commands" data-hud="sec-commands" aria-labelledby="cmd-h">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="kicker" dir="ltr">// CHEAT SHEET</p>
+          <h2 id="cmd-h">الأوامر اللي بتحتاجها</h2>
+          <p class="sec-sub">انسخ أي أمر بضغطة. الكلمات البرتقالية تكتب مكانها القيمة حقتك.</p>
+        </header>
+
+        <div class="term term--sheet">
+          <div class="term__bar" dir="ltr"><span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="term__title">bash — cheat-sheet</span></div>
+          <div class="sheet" dir="ltr">
+            <div class="sheet__group">
+              <h3 class="sheet__h" dir="ltr"># START</h3>
+              <div class="cmd" data-copy="git clone <url>"><code dir="ltr"><span class="p">$</span> git clone <var>&lt;url&gt;</var></code><p dir="rtl">تنزّل نسخة كاملة من الـRepository على جهازك</p></div>
+              <div class="cmd" data-copy="git status"><code dir="ltr"><span class="p">$</span> git status</code><p dir="rtl">وش وضع ملفاتك الحين؟</p></div>
+              <div class="cmd" data-copy="git branch"><code dir="ltr"><span class="p">$</span> git branch</code><p dir="rtl">تعرض الـbranches وتوريك أنت على أي واحد</p></div>
+              <div class="cmd" data-copy="git switch -c <branch-name>"><code dir="ltr"><span class="p">$</span> git switch -c <var>&lt;branch-name&gt;</var></code><p dir="rtl">تسوي branch جديد وتنتقل له</p></div>
+              <div class="cmd" data-copy="git switch <branch-name>"><code dir="ltr"><span class="p">$</span> git switch <var>&lt;branch-name&gt;</var></code><p dir="rtl">تنتقل لـbranch موجود</p></div>
+            </div>
+
+            <div class="sheet__group">
+              <h3 class="sheet__h" dir="ltr"># SAVE &amp; PUSH</h3>
+              <div class="cmd" data-copy="git add ."><code dir="ltr"><span class="p">$</span> git add .</code><p dir="rtl">تجهّز كل التعديلات للـcommit <span dir="ltr">(Staging)</span></p></div>
+              <div class="cmd" data-copy='git commit -m "message"'><code dir="ltr"><span class="p">$</span> git commit -m <var>"message"</var></code><p dir="rtl">تحفظ checkpoint برسالة واضحة</p></div>
+              <div class="cmd" data-copy="git push -u origin <branch-name>"><code dir="ltr"><span class="p">$</span> git push -u origin <var>&lt;branch-name&gt;</var></code><p dir="rtl">أول push للـbranch، يربطه بـGitHub</p></div>
+              <div class="cmd" data-copy="git push"><code dir="ltr"><span class="p">$</span> git push</code><p dir="rtl">بعدها: ترفع أي commits جديدة</p></div>
+              <div class="cmd" data-copy="git pull"><code dir="ltr"><span class="p">$</span> git pull</code><p dir="rtl">تجيب آخر التحديثات قبل ما تبدأ شغل جديد</p></div>
+            </div>
+
+            <div class="sheet__group">
+              <h3 class="sheet__h" dir="ltr"># UNDO</h3>
+              <div class="cmd" data-copy="git log --oneline"><code dir="ltr"><span class="p">$</span> git log --oneline</code><p dir="rtl">تشوف كل الـcheckpoints</p></div>
+              <div class="cmd" data-copy="git restore <file>"><code dir="ltr"><span class="p">$</span> git restore <var>&lt;file&gt;</var></code><p dir="rtl">تلغي تعديلاتك على ملف، قبل الـcommit</p></div>
+              <div class="cmd" data-copy="git revert <hash>"><code dir="ltr"><span class="p">$</span> git revert <var>&lt;hash&gt;</var></code><p dir="rtl">تلغي commit بأمان، بدون ما تمسح التاريخ</p></div>
+              <div class="cmd" data-copy="git merge --abort"><code dir="ltr"><span class="p">$</span> git merge --abort</code><p dir="rtl">تلغي الـmerge وترجع زي ما كنت لو تلخبطت في conflict</p></div>
+              <div class="cmd cmd--danger"><span class="copy copy--off" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="#i-x-circle-fill"/></svg></span><code dir="ltr"><span class="p">$</span> git push --force</code><p dir="rtl">لا تستخدمه: يمسح شغل غيرك</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="closing" id="end" data-hud="complete">
@@ -325,6 +406,7 @@
   </footer>
 
   <script src="data/missions.js"></script>
+  <script src="data/leaderboard.js"></script>
   <script src="src/script.js"></script>
 </body>
 </html>
