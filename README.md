@@ -63,22 +63,6 @@ UJ_Tuwaiq_Github_Workshop/
 └── package.json
 ```
 
-## Workshop map
-
-| Level | Mission | Time |
-| --- | --- | --- |
-| Mission 01 | Enter GitHub | 15 min |
-| Mission 02 | Build Your Repository | 25 min |
-| Boss Battle 01 | GitHub Speed Challenge | 5 min |
-| Mission 03 | Control Your Code | 18 min |
-| Mission 04 | Collaborate | 25 min |
-| Mission 05 | Resolve Conflicts | 13 min |
-| Boss Battle 02 | Conflict Resolver | 15 min |
-| Mission 06 | Don't Break the Repo | 15 min |
-| Mission 07 | Manage the Project | 15 min |
-| Final Boss | Project Management Challenge | 15 min |
-| Mission 08 | Automate It | 10 min |
-
 ## License
 
 MIT
