@@ -63,7 +63,3 @@ UJ_Tuwaiq_Github_Workshop/
 ├── .env.example
 └── package.json
 ```
-
-## License
-
-MIT
