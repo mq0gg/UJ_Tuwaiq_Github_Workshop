@@ -53,7 +53,8 @@ UJ_Tuwaiq_Github_Workshop/
 │   └── leaderboard.js      # top 3 individuals and teams
 ├── arena/
 │   ├── team-1.html         # Boss Battle 02 arena for team 1
-│   └── team-2.html         # Boss Battle 02 arena for team 2
+│   ├── team-2.html         # Boss Battle 02 arena for team 2
+│   └── team-3.html         # Boss Battle 02 arena for team 3
 ├── tests/
 │   └── basic.test.js       # checks the timeline adds up
 ├── .github/workflows/
@@ -63,9 +64,7 @@ UJ_Tuwaiq_Github_Workshop/
 └── package.json
 ```
 
-## Workshop map
-
-
+ main
 ## License
 
 MIT
